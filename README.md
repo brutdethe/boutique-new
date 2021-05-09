@@ -1,53 +1,38 @@
-# Boutique de thé
+# create-svelte
 
-Petite boutique simple pour vendre des objets ou des produits.
-Nous l'utilisons pour le thé et des objets de thé mais rien n'empêche de l'utiliser pour d'autres sujets. 
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-## À propos de l'organisation
+## Creating a project
 
-### Les fonctionnalités
+If you're seeing this, you've probably already done this step. Congrats!
 
-Backlog du produit : https://github.com/pntbr/boutique/projects/1
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-### L'équipe
+# create a new project in my-app
+npm init svelte@next my-app
+```
 
-- [Stéphane Langlois](https://github.com/pntbr) (scopyleft/échappée belle/Brut de Thé) - développement
-- [Jé le Potier](https://www.theiere-tasse.com) - PO 
-- [Erick Gardin](https://entre-quote.com/) - intégration CSS
-- [Maïtané Lenoir](https://www.maiwann.net/) - Design
-- [Antoine Vernois](https://blog.crafting-labs.fr/) - "Supervision"
+> Note: the `@next` is temporary
 
-## À propos de la technique
+## Developing
 
-- framework JavaScript : https://sapper.svelte.dev - https://svelte.dev
-- framework css : https://picturepan2.github.io/spectre/
-- optimisation des photos : https://sharp.pixelplumbing.com
-  
-- hébergement : [heroku](https://id.heroku.com/login)
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-### Organisation GitHub
+```bash
+npm run dev
 
-Le site est développé sur la branche : [_dev_](../../tree/dev)  
-La branche principale est : [_main_](../../tree/main)
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-### Pour lancer le site en local
+## Building
 
-`$ npm run dev -- --open`
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
-### Pour déployer 
+```bash
+npm run build
+```
 
-Le déploiement est automatisé à partir de la branche [_prod_](../../tree/prod) vers *Heroku*
-
-### Stripe
-
-#### Pour stocker les clés
-
-On utilise [dotenv](https://github.com/motdotla/dotenv) pour récupérer les variables stockées dans un fichier *.env*  
-C'est dans ce ficher que l'on place la [clé stripe](https://dashboard.stripe.com/test/apikeys) :
-`stripe_secret=sk_test_66HYYSHXXXXXXXXXXXXXXXXXXX`
-
-Pour *heroku* la clé est stockée dans les *settings*
-
-## Licence
-
-[CC1.0](LICENSE)
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
