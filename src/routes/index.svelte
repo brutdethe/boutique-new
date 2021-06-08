@@ -64,6 +64,16 @@
 		padding: 0.8rem;
 		text-align: right;
 	}
+
+	@media (max-width: 600px) {
+		.product {
+			flex-direction: column;
+		}
+
+		.photo > img {
+			width: 100%;
+		}
+	}
 </style>
 
 <svelte:head>
