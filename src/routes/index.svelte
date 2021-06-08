@@ -68,11 +68,12 @@
 
 <svelte:head>
 	<title>Théière 西施-XīShī du 坭興-NíXìng</title>
+	<meta name="description" content="Fiche de la théière 西施-XīShī du 坭興-NíXìng." />
 </svelte:head>
 
 <section class="product">
 	<aside class="photo">
-		<img src="theiere_2-a.jpg" alt="" class="src" />
+		<img src="theiere_2-a.jpg" alt="西施-XīShī du 坭興-NíXìng" class="src" />
 	</aside>
 	<section class="product-card">
 		<hgroup class="titles">
