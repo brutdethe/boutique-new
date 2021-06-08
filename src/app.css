@@ -135,3 +135,13 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+/* B2T css */
+
+body {
+    color: #3b4351;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    max-width: 90em;
+    margin: auto;
+}
