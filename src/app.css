@@ -142,6 +142,7 @@ table {
 body {
     color: #3b4351;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    text-rendering: optimizeLegibility;
     max-width: 90em;
     margin: auto;
 }
