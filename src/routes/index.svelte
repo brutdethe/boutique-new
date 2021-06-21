@@ -1,28 +1,24 @@
-<script context="module">
-	export async function load({ fetch }) {
+<script>
+	import '../app.css';
+
+	async function buy() {
+		const stripe = Stripe('stripe_public_token');
 		const url = `/checkout`;
 		const res = await fetch(url);
 
 		if (res.ok) {
-			return {
-				props: {
-					id: await res.text()
-				}
-			};
+			res.text().then(function(checkout_id) {
+				stripe
+					.redirectToCheckout({
+						sessionId: checkout_id
+					})
+					.then(function(result) {
+						console.log(result.error.message);
+					});
+			});
+		} else {
+			console.log('Fetch failed!', res.status);
 		}
-
-		return {
-			status: res.status,
-			error: new Error(`Could not load ${url}`)
-		};
-	}
-</script>
-
-<script>
-	import '../app.css';
-
-	function buy() {
-		console.log('Button Clicked');
 	}
 </script>
 
