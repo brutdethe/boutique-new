@@ -16,11 +16,11 @@ export async function get() {
             quantity: 1,
         }],
         mode: 'payment',
-        success_url: 'http://localhost/success.html',
-        cancel_url: 'http://localhost/cancel.html',
-    })
+        success_url: 'http://localhost:3001/success',
+        cancel_url: 'http://localhost:3001/cancel',
+    });
 
     return {
         "body": session.id
-    }
-}
+    };
+};
