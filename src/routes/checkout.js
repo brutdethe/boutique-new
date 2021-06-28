@@ -1,8 +1,8 @@
-import Stripe from 'stripe'
+import Stripe from 'stripe';
 
 export async function get() {
-    const stripe = new Stripe('insert your stripe secret key here!')
-
+    const stripe_secret_key = '';
+    const stripe = new Stripe(stripe_secret_key);
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [{

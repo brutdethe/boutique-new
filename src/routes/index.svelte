@@ -2,7 +2,9 @@
 	import '../app.css';
 
 	async function buy() {
-		const stripe = Stripe('stripe_public_token');
+		const stripe_public_key = '';
+
+		const stripe = Stripe(stripe_public_key);
 		const url = `/checkout`;
 		const res = await fetch(url);
 
