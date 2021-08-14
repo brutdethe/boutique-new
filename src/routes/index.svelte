@@ -1,10 +1,9 @@
 <script>
 	import '../app.css';
+	import { STRIPE_PUBLIC_KEY } from '$lib/env.js';
 
 	async function buy() {
-		const stripe_public_key = '';
-
-		const stripe = Stripe(stripe_public_key);
+		const stripe = Stripe(STRIPE_PUBLIC_KEY);
 		const url = `/checkout`;
 		const res = await fetch(url);
 
